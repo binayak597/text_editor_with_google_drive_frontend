@@ -27,7 +27,7 @@ const Dashboard = () => {
 
     // Fetch user profile
     axios
-      .get("http://localhost:8000/auth/profile", {
+      .get("https://text-editor-with-google-drive-backend.onrender.com/auth/profile", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setUser(res.data.user))
@@ -42,7 +42,7 @@ const Dashboard = () => {
   const handleSave = async (content) => {
     try {
       await axios.post(
-        "http://localhost:8000/api/save-letter",
+        "https://text-editor-with-google-drive-backend.onrender.com/api/save-letter",
         { content, folderId: user?.folderId },
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );

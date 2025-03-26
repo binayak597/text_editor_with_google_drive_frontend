@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
 
   const handleGoogleAuth = () => {
-    window.location.href = "http://localhost:8000/auth/google";  // Redirect user to Google OAuth
+    window.location.href = "https://text-editor-with-google-drive-backend.onrender.com/auth/google";  // Redirect user to Google OAuth
   };
 
   return (
